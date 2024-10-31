@@ -1,0 +1,148 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif; /* 更优雅的字体 */
+    background-color: #f0f4f8; /* 柔和的背景色 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#dhtmlgoodies_dragDropContainer {
+    width: 80%; /* 更适合大屏幕的宽度 */
+    max-width: 800px;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    user-select: none; /* 防止文字被选中 */
+}
+
+#dhtmlgoodies_listOfItems {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#dhtmlgoodies_listOfItems p {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #42a5f5;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+#dhtmlgoodies_listOfItems ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 500px;
+    overflow-y: auto; /* 超过高度时可以滚动 */
+}
+
+#dhtmlgoodies_listOfItems ul li {
+    background-color: #ffeb3b;
+    border: 1px solid #FFC107;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 25px; /* 更加圆润的形状 */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#dhtmlgoodies_listOfItems ul li:hover {
+    transform: scale(1.05); /* 鼠标悬停时稍微放大 */
+    background-color: #FFD700; /* 改变背景色 */
+}
+
+#dhtmlgoodies_mainContainer {
+    width: 70%;
+    float: left;
+}
+
+#dhtmlgoodies_mainContainer div {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #42a5f5;
+    border-radius: 10px;
+    background-color: #e3f2fd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+#dhtmlgoodies_mainContainer div:hover {
+    background-color: #bbdefb; /* 鼠标悬停时改变背景色 */
+}
+
+#dhtmlgoodies_mainContainer div p {
+    margin: 0;
+    font-weight: bold;
+    color: #1e88e5;
+}
+
+#dhtmlgoodies_mainContainer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+    min-height: 80px;
+}
+
+#dhtmlgoodies_mainContainer ul li {
+    background-color: #ffeb3b;
+    border: 1px solid #FFC107;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 25px;
+    transition: background-color 0.2s;
+}
+
+.correctAnswer {
+    background-color: #66bb6a !important; /* 正确答案颜色 */
+    color: #FFF !important;
+}
+
+.wrongAnswer {
+    background-color: #e57373 !important; /* 错误答案颜色 */
+    color: #FFF !important;
+}
+
+#dragContent {
+    position: absolute;
+    width: auto;
+    padding: 10px;
+    background-color: #ffeb3b;
+    border: 1px solid #FFC107;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 2000;
+}
+
+#dragDropIndicator {
+    position: absolute;
+    width: 7px;
+    height: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+.style1 {
+    color: #FF0000;
+}
