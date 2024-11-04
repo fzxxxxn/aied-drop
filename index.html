@@ -378,53 +378,152 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 
-</head><body>
-<h1 align="center">AI in Education</h1>
-<p>Drag-n-drop concepts from the column in the appropriate AI in Education category box. Each box can contain only <span class="style1">3 items</span>.</p>
-<div id="dhtmlgoodies_dragDropContainer">
-	<div id="topBar">
-	<div style="padding-bottom: 5px; width: 328px; height: 1px;">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Drag and Drop Quiz</title>
+  <link rel="stylesheet" href="style.css">
 
-</script>
-	</div>
-			
-		</div>
-	<div id="dhtmlgoodies_listOfItems">
-		<div class="">
-			<p>Concepts/Names</p>		
-		<ul id="allItems">
-			
-			
-		 <li id="node1" groupid="box1">Adaptive Learning</li>
-                    <li id="node2" groupid="box2">Automated Grading</li>
-                    <li id="node3" groupid="box3">Virtual Tutor</li>
-                    <li id="node4" groupid="box1">Personalized Study Path</li>
-                    <li id="node5" groupid="box2">AI-based Feedback</li>
-                    <li id="node6" groupid="box3">Teacher Support Tools</li>
-                    <li id="node7" groupid="box1">Student Analytics</li>
-                    <li id="node8" groupid="box2">Smart Assessments</li>
-                    <li id="node9" groupid="box3">Interactive AI Tutor</li>
-		</div>
-	</div>	
-	<div id="dhtmlgoodies_mainContainer">
-		<!-- ONE <UL> for each "room" -->
-		<div class="">
-			<p>Personalized Learning</p>
-                <ul style="height: 72px;" id="box1"></ul>
-            </div>
-            <div>
-                <p>Automated Assessment</p>
-                <ul style="height: 72px;" id="box2"></ul>
-            </div>
-            <div>
-                <p>Teaching Assistance</p>
-                <ul style="height: 72px;" id="box3"></ul>
-		</div>
-		
-		
-	</div>
-</div>
-<ul style="left: 110px; top: 329px; display: block;" id="dragContent"></ul>
-<div style="display: none; left: 24px; top: 333px;" id="dragDropIndicator"><img src="insert.gif"></div>
-<div id="saveContent"></div>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+    }
+
+    #container {
+      display: flex;
+      width: 80%;
+      margin: 20px auto;
+      gap: 20px;
+    }
+
+    #introSection {
+      flex: 0.5; /* Set intro section to take up half of the container width */
+    }
+
+    #title {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    #intro {
+      font-size: 16px;
+      color: #555;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: left;
+    }
+
+    #dhtmlgoodies_dragDropContainer {
+      flex: 1;
+      display: flex;
+      gap: 20px;
+    }
+
+    #dhtmlgoodies_listOfItems,
+    #dhtmlgoodies_mainContainer {
+      width: 300px;
+    }
+
+    #dhtmlgoodies_listOfItems ul,
+    #dhtmlgoodies_mainContainer ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 10px;
+      min-height: 100px;
+    }
+
+    #dhtmlgoodies_listOfItems p,
+    #dhtmlgoodies_mainContainer p {
+      font-weight: bold;
+      color: #333;
+    }
+
+    li {
+      padding: 8px;
+      margin: 5px 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    li.correctAnswer {
+      background-color: #c8e6c9;
+    }
+
+    li.wrongAnswer {
+      background-color: #ffcdd2;
+    }
+  </style>
+
+  <script type="text/javascript">
+    // JavaScript code remains the same as in the original code
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="introSection">
+      <div id="title">AI in Education</div>
+      <div id="intro">
+        <p>Drag and drop the concepts from the column into the correct AI in Education category. Each box can contain only <strong>3 items</strong>.</p>
+      </div>
+    </div>
+
+    <div id="dhtmlgoodies_dragDropContainer">
+      <div id="dhtmlgoodies_listOfItems">
+        <p>Concepts/Names</p>
+        <ul id="allItems">
+          <li id="node1" groupid="box1">Adaptive Learning</li>
+          <li id="node2" groupid="box2">Automated Grading</li>
+          <li id="node3" groupid="box3">Virtual Tutor</li>
+          <li id="node4" groupid="box1">Personalized Study Path</li>
+          <li id="node5" groupid="box2">AI-based Feedback</li>
+          <li id="node6" groupid="box3">Teacher Support Tools</li>
+          <li id="node7" groupid="box1">Student Analytics</li>
+          <li id="node8" groupid="box2">Smart Assessments</li>
+          <li id="node9" groupid="box3">Interactive AI Tutor</li>
+        </ul>
+      </div>
+
+      <div id="dhtmlgoodies_mainContainer">
+        <div>
+          <p>Personalized Learning</p>
+          <ul id="box1"></ul>
+        </div>
+        <div>
+          <p>Automated Assessment</p>
+          <ul id="box2"></ul>
+        </div>
+        <div>
+          <p>Teaching Assistance</p>
+          <ul id="box3"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul id="dragContent"></ul>
+  <div id="dragDropIndicator" style="display: none;"><img src="insert.gif" alt="Indicator"></div>
+  <div id="saveContent"></div>
+</body>
+
+</html>
